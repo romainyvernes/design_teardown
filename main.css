@@ -46,3 +46,384 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  =======
+  Headlines
+  =======
+*/
+
+.headline {
+  width: 100%;
+  background: #aaa;
+}
+
+/*
+  =======
+  Page sections
+  =======
+*/
+
+.section {
+  background: #eee;
+}
+
+/*
+  =======
+  Groupings
+  =======
+*/
+
+.grouping {
+  margin: 3em 5em 6em 5em;
+}
+
+/*
+  =======
+  Posts
+  =======
+*/
+
+.posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px 130px;
+}
+
+.posts .section {
+  padding: 2em;
+}
+
+.posts .headline {
+  height: 30%;
+}
+
+/*
+  ========
+  Navigation
+  ========
+*/
+
+.navigation {
+  background: #777;
+}
+
+/*
+  ========
+  Buttons
+  ========
+*/
+
+.button {
+  background: #bbb;
+  border-radius: 10px;
+  width: 100%;
+}
+
+/*
+  ========
+  Page header
+  ========
+*/
+
+.primary-header {
+  height: 10em;
+}
+
+.primary-header .navigation {
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 3em;
+}
+
+.primary-header .search {
+  height: 60%;
+  width: 30%;
+  background: #555;
+  border-radius: 10px;
+}
+
+.primary-header .categories {
+  background: #ccc;
+  height: 40%;
+}
+
+/*
+  =======
+  Top section
+  =======
+*/
+
+.top-section {
+  height: 700px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+}
+
+.top-posts {
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+/* applies to all top posts */
+.top-posts .section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* applies to largest element within top posts */
+.top-posts .highlight {
+  align-items: flex-start;
+}
+
+/* applies to headline within article at the top of the page */
+.top-posts .highlight .headline {
+  height: 50%;
+  width: 60%;
+  margin: 2em 2em 0 0;
+  background: #555;
+}
+
+/* applies to headlines at the top that don't have any text below them */
+.top-posts .headline.centered {
+  height: 50%;
+  width: 70%;
+  margin-right: 2em;
+}
+
+/*
+  =======
+  Sidebar
+  =======
+*/
+
+.sidebar {
+  height: 90%;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #ddd;
+}
+
+.sidebar .headline {
+  height: 15%;
+  margin-bottom: 12em;
+}
+
+.sidebar .button:first-child {
+  margin-top: 5em;
+  width: 90%;
+  height: 10%;
+}
+
+.sidebar .button:last-child {
+  height: 12%;
+}
+
+/*
+  =======
+  Guides
+  =======
+*/
+
+.guides {
+  height: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 0 1em;
+}
+
+.guides .section {
+  background: #bbb;
+  border-radius: 10px;
+  padding: 3em 4em 3em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.guides .headline,
+.guides .button {
+  height: 25%;
+}
+
+.guides .headline {
+  background: #777;
+}
+
+.guides .button {
+  background: #555;
+}
+
+/*
+  =======
+  Latest posts
+  =======
+*/
+
+.latest {
+  height: 2000px;
+  display: grid;
+  grid-template-rows: 1.25fr 1fr 1.25fr;
+  gap: 50px;
+}
+
+/*
+  =======
+  Join area
+  =======
+*/
+
+.join {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 130px;
+}
+
+.join .button {
+  background: #777;
+}
+
+.join .section {
+  display: flex;
+}
+
+.join .section:first-child {
+  height: 50%;
+  align-self: center;
+  padding: 2em;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.join .section:first-child .button {
+  height: 20%;
+  width: 30%;
+}
+
+.join .section:last-child {
+  padding: 4em 2em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.join .section:last-child .headline {
+  height: 18%;
+  width: 90%;
+  margin-bottom: 6em;
+}
+
+.join .section:last-child .button {
+  height: 20%;
+  width: 60%;
+}
+
+/*
+  =======
+  Family area
+  =======
+*/
+
+.family {
+  height: 700px;
+  display: grid;
+  grid-template-rows: 0.75fr 3fr;
+  gap: 50px;
+  padding: 2em;
+}
+
+.family > .headline {
+  width: 60%;
+  justify-self: center;
+  background: #888;
+}
+
+.family .slider {
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 350px);
+  gap: 20px;
+}
+
+.family .section {
+  background: #ccc;
+}
+
+.family .slider .section {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.family .slider .headline {
+  height: 15%;
+  margin-bottom: 3.5em;
+}
+
+.family .slider .button {
+  height: 18%;
+  background: #777;
+}
+
+/*
+  =======
+  Workshop area
+  =======
+*/
+
+.workshop {
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.workshop .headline {
+  height: 15%;
+  width: 45%;
+  margin: 7em 0 9em 0;
+  background: #555;
+}
+
+.workshop .button {
+  height: 10%;
+  width: 30%;
+  background: #555;
+}
+
+/*
+  =======
+  Community area
+  =======
+*/
+
+.community {
+  height: 1200px;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  gap: 50px;
+}
+
+/*
+  =======
+  Page footer
+  =======
+*/
+
+.primary-footer {
+  height: 100vh;
+}
