@@ -1,4 +1,4 @@
-## Responsive Design
+## Design Teardown
 ### Description
 Heatmap of an existing web page's layout aimed at illustrating understanding of basic UX design concepts (element sizing, font, typography) to create a modern design.
 ### About
